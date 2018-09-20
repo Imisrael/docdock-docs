@@ -21,7 +21,7 @@ languageName = "English"
 [Languages.jp]
 title = "ドキュメンテーション"
 weight = 2
-languageName = "日本語"
+languageName = "Japanese"
 
 
 [params]
