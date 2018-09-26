@@ -1,3 +1,15 @@
++++
+title = "What is GridDB"
+weight = 1
++++
+
+##### Toshiba GridDB™ is a highly scalable NoSQL database best suited for IoT and Big Data
+
+We live in the era of the Internet of Things (IoT) where billions of devices are interconnected and are generating petabytes of data at an increasing rate. Gaining insights and information from that data and generating value out of it gives a tangible competitive advantage to businesses, organizations, governments, and even individuals.
+
+Organizations should focus more on creating value from data that will enhance their core products, services or even operational processes rather than spend time in dealing with the complexity surrounding Big Data. Big data, in this case, means data in large quantities, high frequencies, and vast varieties.
+
+GridDB is an innovative solution built in Toshiba to solve these complex problems. The foundation of GridDB’s principles is based upon offering a versatile data store that is optimized for IoT, provides high scalability, is tuned for high performance, and ensures high reliability.
 
 Four Pillars of GridDB
 ----------------------
@@ -64,4 +76,3 @@ Overall, GridDB offers multiple reliability features for mission-critical applic
 **And finally...**
 
 When it comes to IoT and Big Data use-cases, GridDB clearly stands out among other databases in the Relational and NoSQL space. Toshiba’s customers in various industry verticals have successfully implemented IoT projects by harnessing the power of GridDB. For more detailed information on each topic covered above, business use-cases and implementation, benchmark performance results and many more please check the GridDB website [www.griddb.org](http://www.griddb.org/)
-
