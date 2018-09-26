@@ -47,19 +47,11 @@ Note: The installation procedure is complicated so please refer to the documenta
 
 **Table 1 JMS Server Configuration**
 
-Setting Item
-
-Setting Value
-
-Notification URI
-
-http://127.0.0.1:7676/
-
-Destination type
-
-queue
-
-Destination namejms/griddb
+| Setting Item               | Setting Value          |
+|----------------------------|------------------------|
+| Notification URI           | http://127.0.0.1:7676/ |
+| Destination type           | queue                  |
+| Destination namejms/griddb |                        |
 
 The following is the output of the JMS server when above code triggers an event
 

@@ -17,83 +17,36 @@ A high-performant _commerical_ NoSQL database. Included with the commercial lice
 Comparison of each edition are as follows:
 
  
-
-
-SOFTWARE SUPPORT
-
-Free Evaluation of SE does not include software support
-
-Maintenance Releases
-
-x
-
-Bug fixes/Patches
-
-x
-
-Updates
-
-x
-
-BASIC
-
-Distributed Data Management
-
-Transaction Management
-
-DATA TYPE SUPPORT
-
-Key-value data
-
-Time-series data
-
-Geometry data
-
-x
-
-QUERY LANGUAGE
-
-SQL Subset (TQL)
-
-SCALABILITY
-
-Offline expansion
-
-Online expansion
-
-x
-
-PERSISTENCY
-
-In-Memory and Disk
-
-API
-
-Java
-
-C
-
-ADMINISTRATIVE TOOL
-
-Offline backup
-
-Online backup
-
-x
-
-Export/import
-
-x
-
-Differential backup function
-
-x
-
-Management GUI
-
-x
-
-Status Acquisition
+|                              | GridDB Community Edition | GridDB Standard Edition |
+|------------------------------|--------------------------|-------------------------|
+| SOFTWARE SUPPORT             |                          |                         |
+| Maintenance Releases         |             X            |            O            |
+| Bug fixes/Patches            |             X            |            O            |
+| Updates                      |             X            |            O            |
+| BASIC                        |                          |                         |
+| Distributed Data Management  |             O            |            O            |
+| Transaction Management       |             O            |            O            |
+| DATA TYPE SUPPORT            |                          |                         |
+| Key-value data               |             O            |            O            |
+| Time-series data             |             O            |            O            |
+| Geometry data                |             X            |            O            |
+| QUERY LANGUAGE               |                          |                         |
+| SQL Subset (TQL)             |             O            |            O            |
+| SCALABILITY                  |                          |                         |
+| Offline expansion            |             O            |            O            |
+| Online expansion             |             X            |            O            |
+| PERSISTENCY                  |                          |                         |
+| In-Memory and Disk           |             O            |            O            |
+| API                          |                          |                         |
+| Java                         |             O            |            O            |
+| C                            |             O            |            O            |
+| ADMINISTRATIVE TOOL          |                          |                         |
+| Offline backup               |             O            |            O            |
+| Online backup                |             X            |            O            |
+| Export/import                |             X            |            O            |
+| Differential backup function |             X            |            O            |
+| Management GUI               |             X            |            O            |
+| Status Acquisition           |             O            |            O            |
 
 License Types
 

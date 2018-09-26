@@ -98,17 +98,10 @@ Types of indexes are as follows:
 
 **Table.1 Index types**
 
-Index type
-
-Description
-
-HASH
-
-High speed retrieval, but not suitable for the operation of reading Row sequentially and impossible to set in the TimeSeries container.
-
-TREE
-
-It is suitable for a retrival specifying that whether the value is larger or smaller than a retrieval vulue to a retrieval range.
+| Index type | Description                                                                                                                             |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| HASH       | High speed retrieval, but not suitable for the operation of reading Row sequentially and impossible to set in the TimeSeries container. |
+| TREE       | It is suitable for a retrival specifying that whether the value is larger or smaller than a retrieval vulue to a retrieval range.       |
 
 There are index types which can not be specified owing to the container type or the column type. Please refer to [GridDB API Reference](../GridDB_API_Reference.html) and [GridDB Technical Reference](../GridDB_TechnicalReference.pdf) for more information.
 

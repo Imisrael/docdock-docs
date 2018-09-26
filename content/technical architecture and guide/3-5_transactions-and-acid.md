@@ -57,45 +57,12 @@ Even if you try to execute an inquiry executed previously in a transaction again
 
   
 
-Isolation level
-
-Dirty read
-
-Non-recurrent reading
-
-Phantom read
-
-READ_UNCOMMITTED
-
-Possibility of occurrence
-
-Possibility of occurrence
-
-Possibility of occurrence
-
-READ_COMMITTED
-
-Safe
-
-Possibility of occurrence
-
-Possibility of occurrence
-
-REPEATABLE_READ
-
-Safe
-
-Safe
-
-Possibility of occurrence
-
-SERIALIZABLE
-
-Safe
-
-Safe
-
-Safe
+| Isolation level  | Dirty read                | Non-recurrent reading     | Phantom read              |
+|------------------|---------------------------|---------------------------|---------------------------|
+| READ_UNCOMMITTED | Possibility of occurrence | Possibility of occurrence | Possibility of occurrence |
+| READ_COMMITTED   | Safe                      | Possibility of occurrence | Possibility of occurrence |
+| REPEATABLE_READ  | Safe                      | Safe                      | Possibility of occurrence |
+| SERIALIZABLE     | Safe                      | Safe                      | Safe                      |
 
 In READ_COMMITED, if data read previously is read again, data that is different from the previous data may be acquired, and if an inquiry is executed again, different results may be acquired even if you execute the inquiry with the same search condition. This is because the data has already been updated and committed by another transaction after the previous read.
 

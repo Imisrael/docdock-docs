@@ -21,31 +21,11 @@ Description: CentOS release 6.3 (Final)
     
     The following 3 RPM packages are needed when installing a GridDB node. Place these packages anywhere in the machine.
     
-    TODO: Table
-      
-    Package name
-    
-    File name
-    
-    Description
-    
-    griddb-server
-    
-    griddb-server-X.X.X-linux.x86_64.rpm
-    
-    The start and other commands for the GridDB node module and server are included.
-    
-    griddb-client
-    
-    griddb-client-X.X.X-linux.x86_64.rpm
-    
-    One set of operating commands except start node is included.
-    
-    griddb-docs
-    
-    griddb-docs-X.X.X-linux.x86_64.rpm
-    
-    GridDB manual and program samples are included.
+| Package name  | File name                            | Description                                                                      |
+|---------------|--------------------------------------|----------------------------------------------------------------------------------|
+| griddb-server | griddb-server-X.X.X-linux.x86_64.rpm | The start and other commands for the GridDB node module and server are included. |
+| griddb-client | griddb-client-X.X.X-linux.x86_64.rpm | One set of operating commands except start node is included.                     |
+| griddb-docs   | griddb-docs-X.X.X-linux.x86_64.rpm   | GridDB manual and program samples are included.                                  |
     
 \*X.X.X is the GridDB version
 
@@ -72,40 +52,17 @@ Under preparation...           ########################################### \[100
 When you install the package, the following group and user are created in the OS. This OS user is set as the operator of GridDB.
 
   
-TODO: Table    
-Group
-
-User
-
-Home directory
-
-gridstore
-
-gsadm
-
-/var/lib/gridstore
+| Group     | User  | Home directory     |
+|-----------|-------|--------------------|
+| gridstore | gsadm | /var/lib/gridstore |
 
 The following environment variables are defined in this gsadm user.
 
   
-TODO: Table
-Environment variables
-
-Value
-
-Meaning
-
-GS\_HOME
-
-/var/lib/gridstore
-
-gsadm/GridDB home directory
-
-GS\_LOG
-
-/var/lib/gridstore/log
-
-Event log file output directory
+| Environment variables | Value                  | Meaning                         |
+|-----------------------|------------------------|---------------------------------|
+| GS_HOME               | /var/lib/gridstore     | gsadm/GridDB home directory     |
+| GS_LOG                | /var/lib/gridstore/log | Event log file output directory |
 
 **\[Points to note\]**
 
@@ -116,14 +73,9 @@ Event log file output directory
 In addition, when the GridDB node module is installed, services that are executed automatically upon startup of the OS will be registered.
 
   
-TODO: Table
-Service Name
-
-Run Level
-
-gridstore
-
-3, 4, 5
+| Service Name | Run Level |
+|--------------|-----------|
+| gridstore    | 3, 4, 5   |
 
 The service registration data can be checked with the following command.
 
@@ -252,44 +204,19 @@ Administrator privilege is used for authentication related matter within the nod
 The default user below exists immediately after installation.
 
   
-TODO: Table
-User
-
-Password
-
-Example of proper use
-
-admin
-
-admin
-
-For authentication of operation administrator user, operation commands
-
-system
-
-manager
-
-For authentication of application user, client execution
+| User   | Password | Example of proper use                                                  |
+|--------|----------|------------------------------------------------------------------------|
+| admin  | admin    | For authentication of operation administrator user, operation commands |
+| system | manager  | For authentication of application user, client execution               |
 
 Administrator user information including the above-mentioned default users can be changed using the user administration command in the operating commands.
 
   
-TODO: Table
-Command
-
-Function
-
-gs\_adduser
-
-Add an administrator user
-
-gs\_deluser
-
-Delete an administrator user
-
-gs\_passwd
-
-Change the password of administrator user
+| Command    | Function                                  |
+|------------|-------------------------------------------|
+| gs_adduser | Add an administrator user                 |
+| gs_deluser | Delete an administrator user              |
+| gs_passwd  | Change the password of administrator user |
 
 Change the password as shown below when using a default user. The password is encrypted during registration.
 
@@ -388,23 +315,11 @@ After all of this, you must create an administrator user to use GridDB. The admi
 After installation a default user called “admin” will be created. The operating commands used to change the default users’ information are shown below.
 
   
-TODO: Table
-
-Command
-
-Function
-
-gs\_adduser
-
-Add an administrator user
-
-gs\_deluser
-
-Delete an administrator user
-
-gs\_passwd
-
-Change the password of an administrator user
+| Command    | Function                                     |
+|------------|----------------------------------------------|
+| gs_adduser | Add an administrator user                    |
+| gs_deluser | Delete an administrator user                 |
+| gs_passwd  | Change the password of an administrator user |
 
 It is recommended that you add a password to the user “admin” as one is not set upon creation.
 

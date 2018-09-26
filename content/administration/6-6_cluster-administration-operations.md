@@ -104,25 +104,12 @@ Define the IP address and port no. of a GridDB node in the node variable.
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable name
-    
-    Specify the node variable name. If the same variable name already exists, its definition will be overwritten.
-    
-    IP address
-    
-    Specify the IP address of the GridDB node (for connecting operation control tools).
-    
-    Port no.
-    
-    Specify the port no. of the GridDB node (for connecting operation control tools).
-    
-    SSH port no.
-    
-    Specify the SSH port number. Number 22 is used by default.
+| Argument           | Description                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| Node variable name | Specify the node variable name. If the same variable name already exists, its definition will be overwritten. |
+| IP address         | Specify the IP address of the GridDB node (for connecting operation control tools).                           |
+| Port no.           | Specify the port no. of the GridDB node (for connecting operation control tools).                             |
+| SSH port no.       | Specify the SSH port number. Number 22 is used by default.                                                    |
     
 *   Example:
     
@@ -164,39 +151,15 @@ Define the GridDB cluster configuration in the cluster variable.
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable name
-    
-    Specify the cluster variable name. If the same variable name already exists, its definition will be overwritten.
-    
-    Cluster name
-    
-    Specify the cluster name.
-    
-    Multicast address
-    
-    \[For the multicast method\] Specify the GridDB cluster multicast address (for client connection).
-    
-    Port no.
-    
-    \[For the multicast method\] Specify the GridDB cluster multicast port no. (for client connection).
-    
-    Node variable
-    
-    Specify the nodes constituting a GridDB cluster with a node variable.
-    
-    When using a cluster variable in a data operation subcommand, the node variable may be omitted.
-    
-    Address list of fixed list method
-    
-    \[For fixed list method\] Specify the list of transaction addresses and ports for cluster.notificationMember in gs_cluster.json Example: 192.168.15.10:10001,192.168.15.11:10001
-    
-    URL of provider method
-    
-    \[For provider method\] Specify the value of cluster.notificationProvider in gs_cluster.json.
+| Argument                          | Description                                                                                                                                                                    |
+|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cluster variable name             | Specify the cluster variable name. If the same variable name already exists, its definition will be overwritten.                                                               |
+| Cluster name                      | Specify the cluster name.                                                                                                                                                      |
+| Multicast address                 | [For the multicast method] Specify the GridDB cluster multicast address (for client connection).                                                                               |
+| Port no.                          | [For the multicast method] Specify the GridDB cluster multicast port no. (for client connection).                                                                              |
+| Node variable                     |  Specify the nodes constituting a GridDB cluster with a node variable. When using a cluster variable in a data operation subcommand, the node variable may be omitted.         |
+| Address list of fixed list method | [For fixed list method] Specify the list of transaction addresses and ports for cluster.notificationMember in gs_cluster.json Example: 192.168.15.10:10001,192.168.15.11:10001 |
+| URL of provider method            | [For provider method] Specify the value of cluster.notificationProvider in gs_cluster.json.                                                                                    |
     
 *   Example:
     
@@ -231,21 +194,11 @@ In addition, node variables can be added or deleted for a defined cluster variab
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable name
-    
-    Specify the name of a cluster variable to add or delete a node.
-    
-    add｜remove
-    
-    Specify add when adding a node variable, and remove when deleting a node variable.
-    
-    Node variable
-    
-    Specify a node variable to add or delete a cluster variable.
+| Argument              | Description                                                                        |
+|-----------------------|------------------------------------------------------------------------------------|
+| Cluster variable name | Specify the name of a cluster variable to add or delete a node.                    |
+| add｜remove           | Specify add when adding a node variable, and remove when deleting a node variable. |
+| Node variable         | Specify a node variable to add or delete a cluster variable.                       |
     
 *   Example:
     
@@ -283,33 +236,14 @@ Define the SQL connection destination in the GridDB cluster configuration. This 
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable name
-    
-    Specify the cluster variable name. If the same variable name already exists, the SQL connection data will be overwritten.
-    
-    Cluster name
-    
-    Specify the cluster name.
-    
-    SQL address
-    
-    \[For multicast method\] Specify the reception address for the SQL client connection.
-    
-    SQL port no.
-    
-    \[For multicast method\] Specify the port no. for the SQL client connection.
-    
-    SQL address list of fixed list method
-    
-    \[For fixed list method\] Specify the list of sql addresses and ports for cluster.notificationMember in gs_cluster.json Example: 192.168.15.10:20001,192.168.15.11:20001
-    
-    URL of provider method
-    
-    \[For provider method\] Specify the value of cluster.notificationProvider in gs_cluster.json.
+| Argument                              | Description                                                                                                                                                            |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cluster variable name                 | Specify the cluster variable name. If the same variable name already exists, the SQL connection data will be overwritten.                                              |
+| Cluster name                          | Specify the cluster name.                                                                                                                                              |
+| SQL address                           | [For multicast method] Specify the reception address for the SQL client connection.                                                                                    |
+| SQL port no.                          | [For multicast method] Specify the port no. for the SQL client connection.                                                                                             |
+| SQL address list of fixed list method | [For fixed list method] Specify the list of sql addresses and ports for cluster.notificationMember in gs_cluster.json Example: 192.168.15.10:20001,192.168.15.11:20001 |
+| URL of provider method                | [For provider method] Specify the value of cluster.notificationProvider in gs_cluster.json.                                                                            |
     
 *   Example:
     
@@ -344,23 +278,11 @@ Define the user and password to access the GridDB cluster.
     
       
     
-    Argument
-    
-    Description
-    
-    User name
-    
-    Specify the name of the user accessing the GridDB cluster.
-    
-    Password
-    
-    Specify the corresponding password.
-    
-    gsadm password
-    
-    Specify the password of the OS user gs_admin.
-    
-    This may be omitted if start node (startnode subcommand) is not going to be executed.
+| Argument       | Description                                                                                                                          |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| User name      | Specify the name of the user accessing the GridDB cluster.                                                                           |
+| Password       | Specify the corresponding password.                                                                                                  |
+| gsadm password |  Specify the password of the OS user gs_admin. This may be omitted if start node (startnode subcommand) is not going to be executed. |
     
 *   Example:
     
@@ -374,21 +296,11 @@ Define the user and password to access the GridDB cluster.
     
       
     
-    Variable Name
-    
-    Storage data
-    
-    user
-    
-    User name
-    
-    password
-    
-    Password
-    
-    ospassword
-    
-    gsadm password
+| Variable Name | Storage data   |
+|---------------|----------------|
+| user          | User name      |
+| password      | Password       |
+| ospassword    | gsadm password |
     
 *   Multiple users cannot be defined. The user and password defined earlier will be overwritten. When operating multiple GridDB clusters in gs_sh, reset the user and password with the setuser subcommand every time the connection destination cluster is changed.
 
@@ -408,17 +320,10 @@ Define an arbitrary variable.
     
       
     
-    Argument
-    
-    Description
-    
-    Variable Name
-    
-    Specify the variable name.
-    
-    Value
-    
-    Specify the setting value. The setting value of the variable concerned can be cleared by omitting the specification.
+| Argument      | Description                                                                                                          |
+|---------------|----------------------------------------------------------------------------------------------------------------------|
+| Variable Name | Specify the variable name.                                                                                           |
+| Value         | Specify the setting value. The setting value of the variable concerned can be cleared by omitting the specification. |
     
 *   Example:
     
@@ -449,13 +354,9 @@ Display the detailed definition of the specified variable.
     
       
     
-    Argument
-    
-    Description
-    
-    Variable Name
-    
-    Specify the name of the variable to display the definition details. If the name is not specified, details of all defined variables will be displayed.
+| Argument      | Description                                                                                                                                           |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Variable Name | Specify the name of the variable to display the definition details. If the name is not specified, details of all defined variables will be displayed. |
     
 *   Example:
     
@@ -494,15 +395,9 @@ Save the variable definition details in the script file.
     
       
     
-    Argument
-    
-    Description
-    
-    Script file name
-    
-    Specify the name of the script file serving as the storage destination. Extension of script file is gsh.
-    
-    If the name is not specified, the data will be saved in the .gsshrc file in the gsadm user home directory.
+| Argument         | Description                                                                                                                                                                                                         |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Script file name |  Specify the name of the script file serving as the storage destination. Extension of script file is gsh.If the name is not specified, the data will be saved in the .gsshrc file in the gsadm user home directory. |
     
 *   Example:
     
@@ -533,15 +428,9 @@ Execute a read script file.
     
       
     
-    Argument
-    
-    Description
-    
-    Script file name
-    
-    Specify the script file to execute.
-    
-    If the script file is not specified, the .gsshrc file in the gsadm user home directory will be imported again.
+| Argument         | Description                                                                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Script file name | Specify the script file to execute. If the script file is not specified, the .gsshrc file in the gsadm user home directory will be imported again. |
     
 *   Example:
     
@@ -593,41 +482,14 @@ Node status
 
   
 
-Status
-
-Status name
-
-Description
-
-Join
-
-SERVICING
-
-Node is joined to the cluster, and the status of the joined cluster is “In Operation”
-
-WAIT
-
-Node is joined to the cluster, and the status of the joined cluster is “Halted”
-
-Start
-
-STARTED
-
-Node is started but has not joined a cluster
-
-STARTING
-
-Starting node
-
-Stop
-
-STOP
-
-Stop node
-
-STOPPING
-
-Stopping node
+| Status | Status name | Description                                                                           |
+|--------|-------------|---------------------------------------------------------------------------------------|
+| Join   | SERVICING   | Node is joined to the cluster, and the status of the joined cluster is “In Operation” |
+|        | WAIT        | Node is joined to the cluster, and the status of the joined cluster is “Halted”       |
+| Start  | STARTED     | Node is started but has not joined a cluster                                          |
+|        | STARTING    | Starting node                                                                         |
+| Stop   | STOP        | Stop node                                                                             |
+|        | STOPPING    | Stopping node                                                                         |
 
 　
 
@@ -641,37 +503,13 @@ Stopping node
     
       
     
-    Status
-    
-    Status name
-    
-    Description
-    
-    Operation
-    
-    SERVICE_STABLE
-    
-    All nodes defined in the cluster configuration have joined the cluster
-    
-    SERVICE_UNSTABLE
-    
-    More than half the nodes defined in the cluster configuration have joined the cluster
-    
-    Halted
-    
-    WAIT
-    
-    More than half the nodes defined in the cluster configuration have left the cluster
-    
-    INIT_WAIT
-    
-    1 or more of the nodes defined in the cluster configuration have left the cluster (when the cluster is operated for the first time, the status will not change to “In Operation” unless all nodes have joined the cluster)
-    
-    Stop
-    
-    STOP
-    
-    All nodes defined in the cluster configuration have left the cluster
+| Status    | Status name      | Description                                                                                                                                                                                                                |
+|-----------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Operation | SERVICE_STABLE   | All nodes defined in the cluster configuration have joined the cluster                                                                                                                                                     |
+|           | SERVICE_UNSTABLE | More than half the nodes defined in the cluster configuration have joined the cluster                                                                                                                                      |
+| Halted    | WAIT             | More than half the nodes defined in the cluster configuration have left the cluster                                                                                                                                        |
+|           | INIT_WAIT        | 1 or more of the nodes defined in the cluster configuration have left the cluster (when the cluster is operated for the first time, the status will not change to “In Operation” unless all nodes have joined the cluster) |
+| Stop      | STOP             | All nodes defined in the cluster configuration have left the cluster                                                                                                                                                       |
     
     The GridDB cluster status will change from “Stop” to “In Operation” when all nodes constituting the GridDB cluster are allowed to join the cluster. In addition, the GridDB cluster status will change to “Halted” when more than half the nodes have left the cluster, and “Stop” when all the nodes have left the cluster.
     
@@ -679,23 +517,10 @@ Stopping node
     
       
     
-    When all nodes are subject to the operation
-    
-    When the operating target is a single node
-    
-    Operation
-    
-    Join
-    
-    [startcluster](#*GridDBクラスタへノード一括参加) Batch entry of a group of nodes that are already operating but have not joined the cluster yet.
-    
-    [joincluster](#*GridDBクラスタへノード参加) Entry by a node that is in operation but has not joined the cluster yet.
-    
-    Left
-    
-    [stopcluster](#*GridDBクラスタからノード一括離脱) Batch detachment of a group of nodes attached to a cluster.
-    
-    [leavecluster](#*GridDBクラスタからノード離脱) Detachment of a node attached to a cluster.
+|           |      | When all nodes are subject to the operation                                                                                                      | When the operating target is a single node                                                                           |
+|-----------|------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Operation | Join | [startcluster](#*GridDBクラスタへノード一括参加) Batch entry of a group of nodes that are already operating but have not joined the cluster yet. | [joincluster](#*GridDBクラスタへノード参加) Entry by a node that is in operation but has not joined the cluster yet. |
+|           | Left | [stopcluster](#*GridDBクラスタからノード一括離脱) Batch detachment of a group of nodes attached to a cluster.                                    | [leavecluster](#*GridDBクラスタからノード離脱) Detachment of a node attached to a cluster.                           |
     
 
 **\[Memo\]**
@@ -722,21 +547,10 @@ Explanation on how to start a node is shown below.
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable｜cluster variable
-    
-    Specify the node to start by its node variable or cluster variable.
-    
-    If the cluster variable is specified, all nodes defined in the cluster variable will be started.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument                        | Description                                                                                                                                                           |
+|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Node variable｜cluster variable |  Specify the node to start by its node variable or cluster variable. If the cluster variable is specified, all nodes defined in the cluster variable will be started. |
+| Timeout time in sec.            |  Specify the wait time after node start-up is completed.Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.    |
     
 *   Example:
     
@@ -768,21 +582,10 @@ Explanation on how to stop a node is shown below.
     
       
     
-    Argument
-    
-    Description
-    
-    node｜cluster variable
-    
-    Specify the node to stop by its node variable or cluster variable.
-    
-    If the cluster variable is specified, all nodes defined in the cluster variable will be stopped.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument               | Description                                                                                                                                                         |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| node｜cluster variable | Specify the node to stop by its node variable or cluster variable. If the cluster variable is specified, all nodes defined in the cluster variable will be stopped. |
+| Timeout time in sec.   |  Specify the wait time after node start-up is completed.Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.  |
     
 *   Example:
     
@@ -808,21 +611,10 @@ In addition, a specified node can be forced to stop as well.
     
       
     
-    Argument
-    
-    Description
-    
-    node｜cluster variable
-    
-    Specify the node to stop by force by its node variable or cluster variable.
-    
-    If the cluster variable is specified, all nodes defined in the cluster variable will be stopped by force.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument               | Description                                                                                                                                                                           |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| node｜cluster variable | Specify the node to stop by force by its node variable or cluster variable. If the cluster variable is specified, all nodes defined in the cluster variable will be stopped by force. |
+| Timeout time in sec.   | Specify the wait time after node start-up is completed. Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.                    |
     
 *   Example:
     
@@ -856,19 +648,10 @@ Explanation on how to add batch nodes into a cluster is shown below. In this cas
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable
-    
-    Specify a GridDB cluster by its cluster variable.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument             | Description                                                                                                                                                        |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cluster variable     | Specify a GridDB cluster by its cluster variable.                                                                                                                  |
+| Timeout time in sec. | Specify the wait time after node start-up is completed. Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified. |
     
 *   Example:
     
@@ -900,19 +683,10 @@ Explanation on how to perform batch detachment of nodes in the cluster is shown 
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable
-    
-    Specify a GridDB cluster by its cluster variable.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument             | Description                                                                                                                                                        |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cluster variable     | Specify a GridDB cluster by its cluster variable.                                                                                                                  |
+| Timeout time in sec. | Specify the wait time after node start-up is completed. Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified. |
     
 *   Example:
     
@@ -943,23 +717,11 @@ Explanation on how to attach a node into a cluster is shown below. Use the joinc
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable
-    
-    Specify a GridDB cluster by its cluster variable.
-    
-    Node variable
-    
-    Specify the node to join with the node variable.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument             | Description                                                                                                                                                        |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cluster variable     | Specify a GridDB cluster by its cluster variable.                                                                                                                  |
+| Node variable        | Specify the node to join with the node variable.                                                                                                                   |
+| Timeout time in sec. | Specify the wait time after node start-up is completed. Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified. |
     
 *   Example:
     
@@ -1000,19 +762,10 @@ Explanation on how to remove a node from a cluster is shown below. Use the leave
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable
-    
-    Specify the node to detach with the node variable.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument             | Description                                                                                                                                                        |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Node variable        | Specify the node to detach with the node variable.                                                                                                                 |
+| Timeout time in sec. | Specify the wait time after node start-up is completed. Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified. |
     
 *   Example:
     
@@ -1045,23 +798,11 @@ Explanation on how to append a node to a pre-defined cluster is shown below. Use
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable
-    
-    Specify a GridDB cluster by its cluster variable.
-    
-    Node variable
-    
-    Specify the node to join with the node variable.
-    
-    Timeout time in sec.
-    
-    Specify the wait time after node start-up is completed.
-    
-    Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.
+| Argument             | Description                                                                                                                                                        |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cluster variable     | Specify a GridDB cluster by its cluster variable.                                                                                                                  |
+| Node variable        | Specify the node to join with the node variable.                                                                                                                   |
+| Timeout time in sec. | Specify the wait time after node start-up is completed. Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified. |
     
 *   Example:
     
@@ -1103,13 +844,9 @@ The following command displays the status of a GridDB cluster and each node cons
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable
-    
-    Specify a GridDB cluster by its cluster variable.
+| Argument         | Description                                       |
+|------------------|---------------------------------------------------|
+| Cluster variable | Specify a GridDB cluster by its cluster variable. |
     
 *   Example:
     
@@ -1159,13 +896,9 @@ The following command displays the GridDB cluster configuration data.
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable
-    
-    Specify the node belonging to a GridDB cluster to be displayed with a node variable.
+| Argument      | Description                                                                          |
+|---------------|--------------------------------------------------------------------------------------|
+| Node variable | Specify the node belonging to a GridDB cluster to be displayed with a node variable. |
     
 *   Example:
     
@@ -1223,13 +956,9 @@ The following command displays the status of the specified node and the statisti
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable
-    
-    Specify the node to display by its node variable.
+| Argument      | Description                                       |
+|---------------|---------------------------------------------------|
+| Node variable | Specify the node to display by its node variable. |
     
 *   Example:
     
@@ -1269,13 +998,9 @@ The following command displays the log of the specified node.
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable
-    
-    Specify the node to display by its node variable.
+| Argument      | Description                                       |
+|---------------|---------------------------------------------------|
+| Node variable | Specify the node to display by its node variable. |
     
 *   Example:
     
@@ -1299,23 +1024,11 @@ Node variable \[category name \[log level\]\]
     
       
     
-    Argument
-    
-    Description
-    
-    Node variable
-    
-    Specify the node to operate by its node variable.
-    
-    Category name
-    
-    Specify the log category name subject to the operation. Output level of all log categories will be displayed by default.
-    
-    Log level
-    
-    Specify the log level to change the log level of the specified category.
-    
-    Log level of the specified category will be displayed by default.
+| Argument      | Description                                                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Node variable | Specify the node to operate by its node variable.                                                                                          |
+| Category name | Specify the log category name subject to the operation. Output level of all log categories will be displayed by default.                   |
+| Log level     | Specify the log level to change the log level of the specified category. Log level of the specified category will be displayed by default. |
     
 *   Example:
     
@@ -1377,17 +1090,10 @@ The following command establishes connection to a GridDB cluster to execute a da
     
       
     
-    Argument
-    
-    Description
-    
-    Cluster variable
-    
-    Specify a GridDB cluster serving as the connection destination by its cluster variable.
-    
-    Database name
-    
-    Specify the database name.
+| Argument         | Description                                                                             |
+|------------------|-----------------------------------------------------------------------------------------|
+| Cluster variable | Specify a GridDB cluster serving as the connection destination by its cluster variable. |
+| Database name    | Specify the database name.                                                              |
     
 *   Example:
     
@@ -1432,17 +1138,10 @@ The following command will execute a search and retain the search results.
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the container subject to the search.
-    
-    Query;
-    
-    Specify the TQL command to execute. A semicolon (;) is required at the end of a TQL command.
+| Argument       | Description                                                                                  |
+|----------------|----------------------------------------------------------------------------------------------|
+| Container name | Specify the container subject to the search.                                                 |
+| Query;         | Specify the TQL command to execute. A semicolon (;) is required at the end of a TQL command. |
     
 *   Example:
     
@@ -1474,13 +1173,9 @@ The following command executes an SQL command and retains the search result. Thi
     
       
     
-    Argument
-    
-    Description
-    
-    SQL command;
-    
-    Specify the SQL command to execute. A semicolon (;) is required at the end of the SQL command.
+| Argument     | Description                                                                                    |
+|--------------|------------------------------------------------------------------------------------------------|
+| SQL command; | Specify the SQL command to execute. A semicolon (;) is required at the end of the SQL command. |
     
 *   Example:
     
@@ -1501,21 +1196,11 @@ The following command executes an SQL command and retains the search result. Thi
     
       
     
-    Process
-    
-    Execution results when terminated normally
-    
-    Search SELECT
-    
-    Display the no. of search results found. Search results are displayed in sub-command get/getcsv/getnoprint.
-    
-    Update INSERT/UPDATE/DELETE
-    
-    Display the no. of rows updated.
-    
-    DDL text
-    
-    Nothing is displayed.
+| Process                     | Execution results when terminated normally                                                                  |
+|-----------------------------|-------------------------------------------------------------------------------------------------------------|
+| Search SELECT               | Display the no. of search results found. Search results are displayed in sub-command get/getcsv/getnoprint. |
+| Update INSERT/UPDATE/DELETE | Display the no. of rows updated.                                                                            |
+| DDL text                    | Nothing is displayed.                                                                                       |
     
 *   See “GridDB API Reference” ([GridDB\_API\_Reference.html](/en/docs/manuals/v3.1/GridDB_API_Reference.html)) for the SQL details.
 
@@ -1537,13 +1222,9 @@ The following command gets the inquiry results and presents them in different fo
     
       
     
-    Argument
-    
-    Description
-    
-    No. of cases acquired
-    
-    Specify the number of search results to be acquired. All search results will be obtained and displayed by default.
+| Argument              | Description                                                                                                        |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------|
+| No. of cases acquired | Specify the number of search results to be acquired. All search results will be obtained and displayed by default. |
     
 
 (B) Save the results obtained in a file in the CSV format.
@@ -1560,17 +1241,10 @@ The following command gets the inquiry results and presents them in different fo
     
       
     
-    Argument
-    
-    Description
-    
-    File name
-    
-    Specify the name of the file where the search results are saved.
-    
-    No. of cases acquired
-    
-    Specify the number of search results to be acquired. All search results will be obtained and saved in the file by default.
+| Argument              | Description                                                                                                                |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------|
+| File name             | Specify the name of the file where the search results are saved.                                                           |
+| No. of cases acquired | Specify the number of search results to be acquired. All search results will be obtained and saved in the file by default. |
     
 
 Results obtained in (C) will not be output.
@@ -1587,14 +1261,10 @@ Results obtained in (C) will not be output.
     
       
     
-    Argument
-    
-    Description
-    
-    No. of cases acquired
-    
-    Specify the number of search results to be acquired. All search results will be obtained by default.
-    
+| Argument              | Description                                                                                          |
+|-----------------------|------------------------------------------------------------------------------------------------------|
+| No. of cases acquired | Specify the number of search results to be acquired. All search results will be obtained by default. |
+
 *   Example:
     
     // execute search
@@ -1644,17 +1314,10 @@ The following command displays the execution plan of the specified TQL command. 
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the target container.
-    
-    Query;
-    
-    Specify the TQL command to get the execution plan. A semicolon (;) is required at the end of a TQL command.
+| Argument       | Description                                                                                                 |
+|----------------|-------------------------------------------------------------------------------------------------------------|
+| Container name | Specify the target container.                                                                               |
+| Query;         | Specify the TQL command to get the execution plan. A semicolon (;) is required at the end of a TQL command. |
     
 *   Example:
     
@@ -1679,17 +1342,10 @@ In addition, the actual measurement values such as the number of processing rows
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the target container.
-    
-    Query;
-    
-    Specify the TQL command to get the execution plan. A semicolon (;) is required at the end of a TQL command.
+| Argument       | Description                                                                                                 |
+|----------------|-------------------------------------------------------------------------------------------------------------|
+| Container name | Specify the target container.                                                                               |
+| Query;         | Specify the TQL command to get the execution plan. A semicolon (;) is required at the end of a TQL command. |
     
 *   Example:
     
@@ -1785,13 +1441,9 @@ The following command is used to create a database.
     
       
     
-    Argument
-    
-    Description
-    
-    Database name
-    
-    Specify the name of the database to be created.
+| Argument      | Description                                     |
+|---------------|-------------------------------------------------|
+| Database name | Specify the name of the database to be created. |
     
 *   Example:
     
@@ -1820,13 +1472,9 @@ The following command is used to delete a database.
     
       
     
-    Argument
-    
-    Description
-    
-    Database name
-    
-    Specify the name of the database to be deleted.
+| Argument      | Description                                     |
+|---------------|-------------------------------------------------|
+| Database name | Specify the name of the database to be deleted. |
     
 *   Example:
     
@@ -1881,13 +1529,9 @@ The following command is used to display the database list and access rights dat
     
       
     
-    Argument
-    
-    Description
-    
-    Database name
-    
-    Specify the name of the database to be displayed.
+| Argument      | Description                                       |
+|---------------|---------------------------------------------------|
+| Database name | Specify the name of the database to be displayed. |
     
 *   Example:
     
@@ -1926,17 +1570,10 @@ The following command is used to assign access rights to the database.
     
       
     
-    Argument
-    
-    Description
-    
-    Database name
-    
-    Specify the name of the database for which access rights are going to be assigned
-    
-    User name
-    
-    Specify the name of the user to assign access rights to.
+| Argument      | Description                                                                       |
+|---------------|-----------------------------------------------------------------------------------|
+| Database name | Specify the name of the database for which access rights are going to be assigned |
+| User name     | Specify the name of the user to assign access rights to.                          |
     
 *   Example:
     
@@ -1964,17 +1601,10 @@ The following command is used to revoke access rights to the database.
     
       
     
-    Argument
-    
-    Description
-    
-    Database name
-    
-    Specify the name of the database for which access rights are going to be revoked.
-    
-    User name
-    
-    Specify the name of the user whose access rights are going to be revoked.
+| Argument      | Description                                                                       |
+|---------------|-----------------------------------------------------------------------------------|
+| Database name | Specify the name of the database for which access rights are going to be revoked. |
+| User name     | Specify the name of the user whose access rights are going to be revoked.         |
     
 *   Example:
     
@@ -2005,17 +1635,10 @@ The following command is used to create a general user (username and password).
     
       
     
-    Argument
-    
-    Description
-    
-    User name
-    
-    Specify the name of the user to be created.
-    
-    Password
-    
-    Specify the password of the user to be created.
+| Argument  | Description                                     |
+|-----------|-------------------------------------------------|
+| User name | Specify the name of the user to be created.     |
+| Password  | Specify the password of the user to be created. |
     
 *   Example:
     
@@ -2044,13 +1667,9 @@ The following command is used to delete a user.
     
       
     
-    Argument
-    
-    Description
-    
-    User name
-    
-    Specify the name of the user to be deleted.
+| Argument  | Description                                 |
+|-----------|---------------------------------------------|
+| User name | Specify the name of the user to be deleted. |
     
 *   Example:
     
@@ -2081,17 +1700,10 @@ The following command is used to update the user password.
     
       
     
-    Argument
-    
-    Description
-    
-    Password
-    
-    Specify the password to change.
-    
-    User name
-    
-    Specify the name of the user whose password is going to be changed.
+| Argument  | Description                                                         |
+|-----------|---------------------------------------------------------------------|
+| Password  | Specify the password to change.                                     |
+| User name | Specify the name of the user whose password is going to be changed. |
     
 
 **\[Memo\]**
@@ -2120,13 +1732,9 @@ The following command displays the user data.
     
       
     
-    Argument
-    
-    Description
-    
-    User name
-    
-    Specify the name of the user to be displayed.
+| Argument  | Description                                   |
+|-----------|-----------------------------------------------|
+| User name | Specify the name of the user to be displayed. |
     
 *   Example:
     
@@ -2183,29 +1791,13 @@ Create a container.
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the name of the container to be created. If the name is omitted in the createcontainer command, a container with the name given in the container data file will be created.
-    
-    Column name
-    
-    Specify the column name.
-    
-    Type
-    
-    Specify the column type.
-    
-    Compression method
-    
-    For time series data, specify the data compression method.
-    
-    Container definition file
-    
-    Specify the file storing the container data in JSON format.
+| Argument                  | Description                                                                                                                                                                         |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Container name            | Specify the name of the container to be created. If the name is omitted in the createcontainer command, a container with the name given in the container data file will be created. |
+| Column name               | Specify the column name.                                                                                                                                                            |
+| Type                      | Specify the column type.                                                                                                                                                            |
+| Compression method        | For time series data, specify the data compression method.                                                                                                                          |
+| Container definition file | Specify the file storing the container data in JSON format.                                                                                                                         |
     
     **Simplified version**
     
@@ -2282,13 +1874,9 @@ The following command is used to delete a container.
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the name of the container to be deleted.
+| Argument       | Description                                      |
+|----------------|--------------------------------------------------|
+| Container name | Specify the name of the container to be deleted. |
     
 *   Example:
     
@@ -2311,13 +1899,9 @@ The following command is used to display the container data.
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the container name to be displayed. Display a list of all containers if omitted.
+| Argument       | Description                                                                              |
+|----------------|------------------------------------------------------------------------------------------|
+| Container name | Specify the container name to be displayed. Display a list of all containers if omitted. |
     
 *   Example:
     
@@ -2370,13 +1954,9 @@ The following command is used to display the table data. This function can be us
     
       
     
-    Argument
-    
-    Description
-    
-    Table name
-    
-    Specify the table name to be displayed. Display a list of all tables if omitted.
+| Argument   | Description                                                                      |
+|------------|----------------------------------------------------------------------------------|
+| Table name | Specify the table name to be displayed. Display a list of all tables if omitted. |
     
 *   Example:
     
@@ -2428,21 +2008,11 @@ The following command is used to create an index in the column of a specified co
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the name of container that the column subject to the index operation belongs to.
-    
-    Column name
-    
-    Specify the name of the column subject to the index operation.
-    
-    Index type...
-    
-    Specify the index type. Specify TREE, HASH or SPATIAL (or multiple) for the index type
+| Argument       | Description                                                                              |
+|----------------|------------------------------------------------------------------------------------------|
+| Container name | Specify the name of container that the column subject to the index operation belongs to. |
+| Column name    | Specify the name of the column subject to the index operation.                           |
+| Index type...  | Specify the index type. Specify TREE, HASH or SPATIAL (or multiple) for the index type   |
     
 *   Example:
     
@@ -2484,21 +2054,11 @@ The following command is used to delete the index in the column of a specified c
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the name of container that the column subject to the index operation belongs to.
-    
-    Column name
-    
-    Specify the name of the column subject to the index operation.
-    
-    Index type...
-    
-    Specify the index type. Specify TREE, HASH or SPATIAL (or multiple) for the index type
+| Argument       | Description                                                                              |
+|----------------|------------------------------------------------------------------------------------------|
+| Container name | Specify the name of container that the column subject to the index operation belongs to. |
+| Column name    | Specify the name of the column subject to the index operation.                           |
+| Index type...  | Specify the index type. Specify TREE, HASH or SPATIAL (or multiple) for the index type   |
     
 *   Example:
     
@@ -2554,17 +2114,10 @@ The following command is used to delete the trigger of a specified container.
     
       
     
-    Argument
-    
-    Description
-    
-    Container
-    
-    Specify the name of the container whose trigger is going to be deleted.
-    
-    Trigger name
-    
-    Specify the trigger name to delete.
+| Argument     | Description                                                             |
+|--------------|-------------------------------------------------------------------------|
+| Container    | Specify the name of the container whose trigger is going to be deleted. |
+| Trigger name | Specify the trigger name to delete.                                     |
     
 *   Example:
     
@@ -2587,17 +2140,10 @@ The following command is used to display the trigger data of a specified contain
     
       
     
-    Argument
-    
-    Description
-    
-    Container
-    
-    Specify the container name to be displayed.
-    
-    Trigger name
-    
-    Specify the trigger name to be displayed. Display a list of all trigger data if omitted.
+| Argument     | Description                                                                              |
+|--------------|------------------------------------------------------------------------------------------|
+| Container    | Specify the container name to be displayed.                                              |
+| Trigger name | Specify the trigger name to be displayed. Display a list of all trigger data if omitted. |
     
 *   Example:
     
@@ -2642,13 +2188,9 @@ The following command is used to display the executed sub-command in the standar
     
       
     
-    Argument
-    
-    Description
-    
-    boolean
-    
-    Display the executed subcommand in the standard output when TRUE is specified Prescribed value is FALSE.
+| Argument | Description                                                                                              |
+|----------|----------------------------------------------------------------------------------------------------------|
+| boolean  | Display the executed subcommand in the standard output when TRUE is specified Prescribed value is FALSE. |
     
 *   Example:
     
@@ -2676,13 +2218,9 @@ The following command is used to display the definition details of the specified
     
       
     
-    Argument
-    
-    Description
-    
-    Message
-    
-    Specify the character string or variable to display.
+| Argument | Description                                          |
+|----------|------------------------------------------------------|
+| Message  | Specify the character string or variable to display. |
     
 *   Example:
     
@@ -2711,13 +2249,9 @@ The following command can be used to set the time for the sleeping function.
     
       
     
-    Argument
-    
-    Description
-    
-    No. of sec
-    
-    Specify the no. of sec to go to sleep.
+| Argument   | Description                            |
+|------------|----------------------------------------|
+| No. of sec | Specify the no. of sec to go to sleep. |
     
 *   Example:
     
@@ -2745,17 +2279,10 @@ The following command is used to execute an external command.
     
       
     
-    Argument
-    
-    Description
-    
-    External command
-    
-    Specify an external command.
-    
-    External command argument
-    
-    Specify the argument of an external command.
+| Argument                  | Description                                  |
+|---------------------------|----------------------------------------------|
+| External command          | Specify an external command.                 |
+| External command argument | Specify the argument of an external command. |
     
 *   Example:
     
@@ -2799,13 +2326,9 @@ The following command is used to terminate gs_sh.
     
       
     
-    Argument
-    
-    Description
-    
-    boolean
-    
-    If TRUE is specified, gs_sh ends when an error occurs in the sub-command. Default is FALSE.
+| Argument | Description                                                                                 |
+|----------|---------------------------------------------------------------------------------------------|
+| boolean  | If TRUE is specified, gs_sh ends when an error occurs in the sub-command. Default is FALSE. |
     
 *   Example:
     
@@ -2831,13 +2354,9 @@ help
     
       
     
-    Argument
-    
-    Description
-    
-    Sub-command name
-    
-    Specify the subcommand name to display the description Display a list of the subcommands if omitted.
+| Argument         | Description                                                                                          |
+|------------------|------------------------------------------------------------------------------------------------------|
+| Sub-command name | Specify the subcommand name to display the description Display a list of the subcommands if omitted. |
     
 *   Example:
     
@@ -2896,19 +2415,10 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Optional
-    
-    Essential
-    
-    Description
-    
-    -v｜--version
-    
-    Display the version of the tool.
-    
-    -h｜--help
-    
-    Display the command list as a help message.
+| Optional      | Essential | Description                                 |
+|---------------|-----------|---------------------------------------------|
+| -v｜--version |           | Display the version of the tool.            |
+| -h｜--help    |           | Display the command list as a help message. |
     
 
 **\[Memo\]**
@@ -2922,204 +2432,39 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　setnode
-    
-    Node variables name IP address
-    
-    Define the node variable.
-    
-    　　Port no. \[SSH port no.\]
-    
-    　　setcluster
-    
-    Cluster variable name cluster name　
-    
-    Define the cluster variable.
-    
-    　　Multicast address port no.
-    
-    　　\[Node variable... \]
-    
-    　　setclustersql
-    
-    Cluster variable name cluster name
-    
-    Define the SQL connection destination in the cluster configuration.
-    
-    　　SQL address SQL port no.
-    
-    　　modcluster 　
-    
-    Cluster variable name
-    
-    Add or delete a node variable to or from the cluster variable.
-    
-    　　 add｜remove node variable...
-    
-    　　setuser
-    
-    User name password　
-    
-    Define the user and password to access the cluster.
-    
-    　　\[Password of OS user gsadm\]
-    
-    　　set
-    
-    Variable name \[value\]
-    
-    Define an arbitrary variable.
-    
-    　　show
-    
-    \[Variable name\]
-    
-    Display the detailed definition of the variable.
-    
-    　　save
-    
-    \[Script file name\]
-    
-    Save the variable definition in the script file.
-    
-    　　load
-    
-    \[Script file name\]
-    
-    Execute a read script file.
+| Sub-command       | Argument                                                                          | Description                                                         |
+|-------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| 　　setnode       |  Node variables name IP address Port no. [SSH port no.]                           | Define the node variable.                                           |
+| 　　setcluster    | Cluster variable name cluster name Multicast address port no. [Node variable... ] | Define the cluster variable.                                        |
+| 　　setclustersql | Cluster variable name cluster name SQL address SQL port no.                       | Define the SQL connection destination in the cluster configuration. |
+| 　　modcluster 　 | Cluster variable name add｜remove node variable...                                | Add or delete a node variable to or from the cluster variable.      |
+| 　　setuser       | User name password [Password of OS user gsadm]                                    | Define the user and password to access the cluster.                 |
+| 　　set           | Variable name [value]                                                             | Define an arbitrary variable.                                       |
+| 　　show          | [Variable name]                                                                   | Display the detailed definition of the variable.                    |
+| 　　save          | [Script file name]                                                                | Save the variable definition in the script file.                    |
+| 　　load          | [Script file name]                                                                | Execute a read script file.                                         |
     
 
 *   GridDB cluster operation sub-command list
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　startnode
-    
-    Node｜cluster variable \[Timeout time in sec.\]
-    
-    Explanation on how to start a node is shown below.
-    
-    *
-    
-    　　stopnode
-    
-    Node｜cluster variable \[Timeout time in sec.\]
-    
-    Explanation on how to stop a node is shown below.
-    
-    *
-    
-    　　stopnodeforce
-    
-    Node｜cluster variable \[Timeout time in sec.\]
-    
-    Stop the specified node by force.
-    
-    *
-    
-    　　startcluster
-    
-    Cluster variable \[Timeout time in sec.\]
-    
-    Attach the active node groups to a cluster, together at once.
-    
-    *
-    
-    　　stopcluster
-    
-    Cluster variable \[Timeout time in sec.\]
-    
-    Detach all of the currently attached nodes from a cluster, together at once.
-    
-    *
-    
-    　　joincluster
-    
-    Cluster variable node variable \[Timeout time in sec.\]
-    
-    Attach a node individually to a cluster.
-    
-    *
-    
-    　　leavecluster
-    
-    Node variable \[Timeout time in sec.\]
-    
-    Detach a node individually from a cluster.
-    
-    *
-    
-    　　leaveclusterforce
-    
-    Node variable \[Timeout time in sec.\]
-    
-    Force the specified node to leave/get detached from a cluster.
-    
-    *
-    
-    　　appendcluster
-    
-    Cluster variable node variable \[Timeout time in sec.\]
-    
-    Add an undefined node to a pre-defined cluster.
-    
-    *
-    
-    　　configcluster
-    
-    Cluster variable
-    
-    Display the cluster status data.
-    
-    *
-    
-    　　config
-    
-    Node variable
-    
-    Display the cluster configuration data.
-    
-    *
-    
-    　　stat
-    
-    Node variable
-    
-    Display the status of the specified node.
-    
-    *
-    
-    　　logs
-    
-    Node variable
-    
-    The following command displays the log of the specified node.
-    
-    *
-    
-    　　logconf
-    
-    Node variable \[category name \[output level\]\]
-    
-    Display and change the log settings.
-    
-    *
+| Sub-command       | Argument                                              | Description                                                                  | *1 |
+|-------------------|-------------------------------------------------------|------------------------------------------------------------------------------|----|
+| startnode         | Node｜cluster variable [Timeout time in sec.]         | Explanation on how to start a node is shown below.                           | *  |
+| stopnode          | Node｜cluster variable [Timeout time in sec.]         | Explanation on how to stop a node is shown below.                            | *  |
+| stopnodeforce     | Node｜cluster variable [Timeout time in sec.]         | Stop the specified node by force.                                            | *  |
+| startcluster      | Cluster variable [Timeout time in sec.]               | Attach the active node groups to a cluster, together at once.                | *  |
+| stopcluster       | Cluster variable [Timeout time in sec.]               | Detach all of the currently attached nodes from a cluster, together at once. | *  |
+| joincluster       | Cluster variable node variable [Timeout time in sec.] | Attach a node individually to a cluster.                                     | *  |
+| leavecluster      | Node variable [Timeout time in sec.]                  | Detach a node individually from a cluster.                                   | *  |
+| leaveclusterforce | Node variable [Timeout time in sec.]                  | Force the specified node to leave/get detached from a cluster.               | *  |
+| appendcluster     | Cluster variable node variable [Timeout time in sec.] | Add an undefined node to a pre-defined cluster.                              | *  |
+| configcluster     | Cluster variable                                      | Display the cluster status data.                                             | *  |
+| config            | Node variable                                         | Display the cluster configuration data.                                      | *  |
+| stat              | Node variable                                         | Display the status of the specified node.                                    | *  |
+| logs              | Node variable                                         | The following command displays the log of the specified node.                | *  |
+| logconf           | Node variable [category name [output level]]          | Display and change the log settings.                                         | *  |
     
 
 　　　　\*1: Commands marked with an \* can be executed by an administrator user only.  
@@ -3128,73 +2473,19 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　connect
-    
-    Cluster variable \[database name\]
-    
-    Connect to a GridDB cluster.
-    
-    　　tql
-    
-    Container name query;
-    
-    The following command will execute a search and retain the search results.
-    
-    　　get
-    
-    \[No. of cases acquired\]
-    
-    Get the search results and display them in a standard output.
-    
-    　　getcsv
-    
-    CSV file name \[No. of search results found\]
-    
-    Get the search results and save them in a file in the CSV format.
-    
-    　　getnoprint
-    
-    \[No. of cases acquired\]
-    
-    Get the query results but do not display them in a standard output.
-    
-    　　tqlclose
-    
-    Discard the search results retained.
-    
-    　　tqlanalyze
-    
-    Container name query;
-    
-    The following command displays the execution plan of the specified TQL command.
-    
-    　　tqlexplain
-    
-    Container name query;
-    
-    Execute the specified TQL command and display the execution plan and actual measurement values such as the number of cases processed etc.
-    
-    　　sql
-    
-    SQL command;
-    
-    The following command executes an SQL command and retains the search result.
-    
-    　　queryclose
-    
-    Close SQL.
-    
-    　　disconnect
-    
-    The following command disconnect user from a GridDB cluster.
+| Sub-command | Argument                                    | Description                                                                                                                               | *1 |
+|-------------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|----|
+| connect     | Cluster variable [database name]            | Connect to a GridDB cluster.                                                                                                              |    |
+| tql         | Container name query;                       | The following command will execute a search and retain the search results.                                                                |    |
+| get         | [No. of cases acquired]                     | Get the search results and display them in a standard output.                                                                             |    |
+| getcsv      | CSV file name [No. of search results found] | Get the search results and save them in a file in the CSV format.                                                                         |    |
+| getnoprint  | [No. of cases acquired]                     | Get the query results but do not display them in a standard output.                                                                       |    |
+| tqlclose    |                                             | Discard the search results retained.                                                                                                      |    |
+| tqlanalyze  | Container name query;                       | The following command displays the execution plan of the specified TQL command.                                                           |    |
+| tqlexplain  | Container name query;                       | Execute the specified TQL command and display the execution plan and actual measurement values such as the number of cases processed etc. |    |
+| sql         | SQL command;                                | The following command executes an SQL command and retains the search result.                                                              |    |
+| queryclose  |                                             | Close SQL.                                                                                                                                |    |
+| disconnect  |                                             | The following command disconnect user from a GridDB cluster.                                                                              |    |
     
 
 　　　　 \*1: Commands marked with an \* can be executed by an administrator user only.  
@@ -3203,55 +2494,14 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　createdatabase
-    
-    Database name
-    
-    Create a database.
-    
-    *
-    
-    　　dropdatabase
-    
-    Database name
-    
-    Delete a database.
-    
-    *
-    
-    　　getcurrentdatabase
-    
-    Display the current database name.
-    
-    　　showdatabase
-    
-    \[Database name\]
-    
-    The following command is used to display the database list and access rights data.
-    
-    　　grant
-    
-    Database name user name
-    
-    The following command is used to assign access rights to the database.
-    
-    *
-    
-    　　revoke
-    
-    Database name user name
-    
-    The following command is used to revoke access rights to the database.
-    
-    *
+| Sub-command        | Argument                | Description                                                                        | *1 |
+|--------------------|-------------------------|------------------------------------------------------------------------------------|----|
+| createdatabase     | Database name           | Create a database.                                                                 | *  |
+| dropdatabase       | Database name           | Delete a database.                                                                 | *  |
+| getcurrentdatabase |                         | Display the current database name.                                                 |    |
+| showdatabase       | [Database name]         | The following command is used to display the database list and access rights data. |    |
+| grant              | Database name user name | The following command is used to assign access rights to the database.             | *  |
+| revoke             | Database name user name | The following command is used to revoke access rights to the database.             | *  |
     
 
 　　　　 \*1: Commands marked with an \* can be executed by an administrator user only.  
@@ -3260,47 +2510,13 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　createuser
-    
-    User name password
-    
-    Create a general user.
-    
-    *
-    
-    　　dropuser
-    
-    User name
-    
-    Delete a general user.
-    
-    *
-    
-    　　setpassword
-    
-    Password
-    
-    Change your own password.
-    
-    　　setpassword
-    
-    User name password
-    
-    Change the password of a general user.
-    
-    　　showuser
-    
-    \[User name\]
-    
-    The following command displays the user data.
+| Sub-command | Argument           | Description                                   | *1 |
+|-------------|--------------------|-----------------------------------------------|----|
+| createuser  | User name password | Create a general user.                        | *  |
+| dropuser    | User name          | Delete a general user.                        | *  |
+| setpassword | Password           | Change your own password.                     |    |
+| setpassword | User name password | Change the password of a general user.        |    |
+| showuser    | [User name]        | The following command displays the user data. |    |
     
 
 　　　　 \*1: Commands marked with an \* can be executed by an administrator user only.  
@@ -3309,73 +2525,18 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　createcollection
-    
-    Container name Column name Type \[Column name Type …\]
-    
-    Create a container (collection),
-    
-    　　createtimeseries
-    
-    Container name Compression method Column name type \[Column name Type …\]
-    
-    Create a container (time series container).
-    
-    　　createcontainer
-    
-    Container data file \[Container name\]
-    
-    Create a container from the container data file.
-    
-    　　dropcontainer
-    
-    Container name
-    
-    The following command is used to delete a container.
-    
-    　　showcontainer
-    
-    \[Container name\]
-    
-    The following command is used to display the container data.
-    
-    　　showtable
-    
-    \[Table name\]
-    
-    The following command is used to display the table data.
-    
-    　　createindex
-    
-    Container name Column name Index type...
-    
-    Create an index in the specified column.
-    
-    　　dropindex
-    
-    Container name Column name Index type...
-    
-    Delete an index of the specified column.
-    
-    　　droptrigger
-    
-    Container name Trigger name
-    
-    Delete the trigger data.
-    
-    　　showtrigger
-    
-    Container name \[trigger name\]
-    
-    Display the trigger data.
+| Sub-command      | Argument                                                                | Description                                                  | *1 |
+|------------------|-------------------------------------------------------------------------|--------------------------------------------------------------|----|
+| createcollection | Container name Column name Type [Column name Type …]                    | Create a container (collection),                             |    |
+| createtimeseries | Container name Compression method Column name type [Column name Type …] | Create a container (time series container).                  |    |
+| createcontainer  | Container data file [Container name]                                    | Create a container from the container data file.             |    |
+| dropcontainer    | Container name                                                          | The following command is used to delete a container.         |    |
+| showcontainer    | [Container name]                                                        | The following command is used to display the container data. |    |
+| showtable        | [Table name]                                                            | The following command is used to display the table data.     |    |
+| createindex      | Container name Column name Index type...                                | Create an index in the specified column.                     |    |
+| dropindex        | Container name Column name Index type...                                | Delete an index of the specified column.                     |    |
+| droptrigger      | Container name Trigger name                                             | Delete the trigger data.                                     |    |
+| showtrigger      | Container name [trigger name]                                           | Display the trigger data.                                    |    |
     
 
 　　　　 \*1: Commands marked with an \* can be executed by an administrator user only.  
@@ -3384,61 +2545,17 @@ The following command is used to display the version of gs_sh.
     
       
     
-    Sub-command
-    
-    Argument
-    
-    Description
-    
-    *1
-    
-    　　echo
-    
-    boolean
-    
-    Set whether to echo back.
-    
-    　　print
-    
-    Message
-    
-    The following command is used to display the definition details of the specified character string or variable.
-    
-    　　sleep
-    
-    No. of sec
-    
-    The following command can be used to set the time for the sleeping function.
-    
-    　　exec
-    
-    External command \[External command argument\]
-    
-    The following command is used to execute an external command.
-    
-    　　exit
-    
-    The following command is used to terminate gs_sh.
-    
-    　　quit
-    
-    The following command is used to terminate gs_sh.
-    
-    　　errexit
-    
-    boolean
-    
-    Set whether to terminate gs_sh when an error occurs.
-    
-    　　help
-    
-    \[Subcommand name\]
-    
-    The following command is used to display a description of the sub-command.
-    
-    　　version
-    
-    Display the version data.
+| Sub-command | Argument                                     | Description                                                                                                    | *1 |
+|-------------|----------------------------------------------|----------------------------------------------------------------------------------------------------------------|----|
+| echo        | boolean                                      | Set whether to echo back.                                                                                      |    |
+| print       | Message                                      | The following command is used to display the definition details of the specified character string or variable. |    |
+| sleep       | No. of sec                                   | The following command can be used to set the time for the sleeping function.                                   |    |
+| exec        | External command [External command argument] | The following command is used to execute an external command.                                                  |    |
+| exit        |                                              | The following command is used to terminate gs_sh.                                                              |    |
+| quit        |                                              | The following command is used to terminate gs_sh.                                                              |    |
+| errexit     | boolean                                      | Set whether to terminate gs_sh when an error occurs.                                                           |    |
+| help        | [Subcommand name]                            | The following command is used to display a description of the sub-command.                                     |    |
+| version     |                                              | Display the version data.                                                                                      |    |
     
 
 　　　　 \*1: Commands marked with an \* can be executed by an administrator user only.

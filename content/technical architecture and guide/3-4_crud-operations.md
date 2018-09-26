@@ -116,29 +116,14 @@ createtimeseries	Container name Compression method Column name type \[Column nam
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the name of the container to be created. If the name is omitted in the createcontainer command, a container with the name given in the container data file will be created.
-    
-    Column name
-    
-    Specify the column name.
-    
-    Type
-    
-    Specify the column type.
-    
-    Compression method
-    
-    For TimeSeries data, specify the data compression method.
-    
-    Container definition file
-    
-    Specify the file storing the container data in JSON format.
+| Argument                  | Description                                                                                                                                                                         |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Container name            | Specify the name of the container to be created. If the name is omitted in the createcontainer command, a container with the name given in the container data file will be created. |
+| Column name               | Specify the column name.                                                                                                                                                            |
+| Type                      | Specify the column type.                                                                                                                                                            |
+| Compression method        | For TimeSeries data, specify the data compression method.                                                                                                                           |
+| Container definition file | Specify the file storing the container data in JSON format.                                                                                                                         |
+
     
     **Detailed version**
     
@@ -215,13 +200,9 @@ The following command is used to display the container data.
     
       
     
-    Argument
-    
-    Description
-    
-    Container name
-    
-    Specify the container name to be displayed. Display a list of all containers if omitted.
+| Argument       | Description                                                                              |
+|----------------|------------------------------------------------------------------------------------------|
+| Container name | Specify the container name to be displayed. Display a list of all containers if omitted. |
     
 *   Example:
     

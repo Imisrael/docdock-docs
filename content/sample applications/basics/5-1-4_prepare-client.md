@@ -19,37 +19,11 @@ First download the following the files to your build environment, the tested ver
 
   
 
-Software
-
-Version
-
-File name
-
-Site to get
-
-Java(Java SE Development Kit) (Windows)
-
-8u102
-
-jdk-8u101-windows-x64.exe
-
-[Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-
-Java(Java SE Development Kit) (Linux)
-
-8u102
-
-jdk-8u101-linux-x64.rpm
-
-[Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-
-Eclipse(Eclipse IDE for Java Developers)
-
-Neon
-
-eclipse-java-neon-R-win32-x86_64.zip
-
-[Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neonr)
+| Software                                 | Version | File name                            | Site to get                                                                                                      |
+|------------------------------------------|---------|--------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| Java(Java SE Development Kit) (Windows)  | 8u102   | jdk-8u101-windows-x64.exe            | [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) |
+| Java(Java SE Development Kit) (Linux)    | 8u102   | jdk-8u101-linux-x64.rpm              | [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) |
+| Eclipse(Eclipse IDE for Java Developers) | Neon    | eclipse-java-neon-R-win32-x86_64.zip | [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neonr)   |
 
 Construction of Build Environment
 ---------------------------------

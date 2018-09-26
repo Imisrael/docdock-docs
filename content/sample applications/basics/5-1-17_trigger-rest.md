@@ -29,25 +29,12 @@ Following information should be set to notify events by REST method.
 
   
 
-Item
-
-Description
-
-Name
-
-Trigger name.
-
-Trigger type
-
-`TriggerInfo.Type.REST`
-
-Notification condition
-
-`TriggerInfo.EventType.PUT` or `TriggerInfo.EventType.DELETE`
-
-Notification destination URI
-
-It should be described in the following format. (method name)://(host name):(port number)/(path)
+| Item                         | Description                                                                                      |
+|------------------------------|--------------------------------------------------------------------------------------------------|
+| Name                         | Trigger name.                                                                                    |
+| Trigger type                 | `TriggerInfo.Type.REST`                                                                          |
+| Notification condition       | `TriggerInfo.EventType.PUT` or `TriggerInfo.EventType.DELETE`                                    |
+| Notification destination URI | It should be described in the following format. (method name)://(host name):(port number)/(path) |
 
 **List.1 Setting the Trigger** (TriggerRest.java)
 

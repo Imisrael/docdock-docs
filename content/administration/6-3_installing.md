@@ -10,31 +10,11 @@ The following chapter will discuss how to install GridDB (Standard Edition). Ins
 The following 3 RPM packages are needed when installing a GridDB node. Place these packages anywhere in the machine.
 
   
-
-Package name
-
-File name
-
-Description
-
-griddb-server
-
-griddb-server-X.X.X-linux.x86_64.rpm
-
-The start and other commands for the GridDB node module and server are included.
-
-griddb-client
-
-griddb-client-X.X.X-linux.x86_64.rpm
-
-One set of operating commands except start node is included.
-
-griddb-docs
-
-griddb-docs-X.X.X-linux.x86_64.rpm
-
-GridDB manual and program samples are included.
-
+| Package name  | File name                            | Description                                                                      |
+|---------------|--------------------------------------|----------------------------------------------------------------------------------|
+| griddb-server | griddb-server-X.X.X-linux.x86_64.rpm | The start and other commands for the GridDB node module and server are included. |
+| griddb-client | griddb-client-X.X.X-linux.x86_64.rpm | One set of operating commands except start node is included.                     |
+| griddb-docs   | griddb-docs-X.X.X-linux.x86_64.rpm   | GridDB manual and program samples are included.                                  |
 *: X.X.X is the GridDB version
 
 Install using the rpm command as a root user.
@@ -58,39 +38,18 @@ When you install the package, the following group and user are created in the OS
 
   
 
-Group
-
-User
-
-Home directory
-
-gridstore
-
-gsadm
-
-/var/lib/gridstore
+| Group     | User  | Home directory     |
+|-----------|-------|--------------------|
+| gridstore | gsadm | /var/lib/gridstore |
 
 The following environment variables are defined in this gsadm user.
 
   
 
-Environment variables
-
-Value
-
-Meaning
-
-GS_HOME
-
-/var/lib/gridstore
-
-gsadm/GridDB home directory
-
-GS_LOG
-
-/var/lib/gridstore/log
-
-Event log file output directory
+| Environment variables | Value                  | Meaning                         |
+|-----------------------|------------------------|---------------------------------|
+| GS_HOME               | /var/lib/gridstore     | gsadm/GridDB home directory     |
+| GS_LOG                | /var/lib/gridstore/log | Event log file output directory |
 
 **\[Points to note\]**
 
@@ -102,13 +61,9 @@ In addition, when the GridDB node module is installed, services that are execute
 
   
 
-Service name
-
-Run level
-
-gridstore
-
-3,4,5
+| Service name | Run level |
+|--------------|-----------|
+| gridstore    | 3,4,5     |
 
 The service registration data can be checked with the following command.
 
@@ -218,43 +173,20 @@ The default user below exists immediately after installation.
 
   
 
-User
-
-Password
-
-Example of proper use
-
-admin
-
-admin
-
-For authentication of operation administrator user, operation commands
-
-system
-
-manager
-
-For authentication of application user, client execution
+| User   | Password | Example of proper use                                                  |
+|--------|----------|------------------------------------------------------------------------|
+| admin  | admin    | For authentication of operation administrator user, operation commands |
+| system | manager  | For authentication of application user, client execution               |
 
 Administrator user information including the above-mentioned default users can be changed using the user administration command in the operating commands.
 
   
 
-Command
-
-Function
-
-gs_adduser
-
-Add an administrator user
-
-gs_deluser
-
-Delete an administrator user
-
-gs_passwd
-
-Change the password of administrator user
+| Command    | Function                                  |
+|------------|-------------------------------------------|
+| gs_adduser | Add an administrator user                 |
+| gs_deluser | Delete an administrator user              |
+| gs_passwd  | Change the password of administrator user |
 
 Change the password as shown below when using a default user. The password is encrypted during registration.
 
@@ -386,35 +318,12 @@ In the address data serving as an interface with the client, there are configura
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/transaction/serviceAddress
-
-string
-
-Reception address of transaction process
-
-/transaction/servicePort
-
-string
-
-Reception port of transaction process
-
-/system/serviceAddress
-
-string
-
-Connection address of operation command
-
-/system/servicePort
-
-string
-
-Connection port of operation command
+| Parameters                  | Data type | Meaning                                  |
+|-----------------------------|-----------|------------------------------------------|
+| /transaction/serviceAddress | string    | Reception address of transaction process |
+| /transaction/servicePort    | string    | Reception port of transaction process    |
+| /system/serviceAddress      | string    | Connection address of operation command  |
+| /system/servicePort         | string    | Connection port of operation command     |
 
 The reception address and port of transaction processes are used to connect individual client to the nodes in the cluster, and to request for the transaction process from the cluster. This address is used when configuring a cluster with a single node, but in the case where multiple nodes are present through API, the address is not used explicitly.
 
@@ -426,23 +335,10 @@ These reception/connection addresses need not be set so long as there is no need
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/transaction/notificationAddress
-
-string
-
-Interface address between client and cluster
-
-/transaction/notificationPort
-
-string
-
-Interface port between client and cluster
+| Parameters                       | Data type | Meaning                                      |
+|----------------------------------|-----------|----------------------------------------------|
+| /transaction/notificationAddress | string    | Interface address between client and cluster |
+| /transaction/notificationPort    | string    | Interface port between client and cluster    |
 
 A multi-cast address and port are specified in the interface address between a client and cluster. This is used by a GridDB cluster to send cluster information to its clients and for the clients to send processing requests via the API to the cluster. See the description of GridStoreFactory class/method in “GridDB API reference” ([GridDB\_API\_Reference.html](http://www.griddb.org/griddb_nosql/manual/GridDB_API_Reference.html)) for details.
 
@@ -456,45 +352,19 @@ In the address data for a cluster to autonomously perform cluster administration
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/serviceAddress
-
-string
-
-Reception address used for cluster administration
-
-/cluster/servicePort
-
-string
-
-Reception port used for cluster administration
+| Parameters              | Data type | Meaning                                           |
+|-------------------------|-----------|---------------------------------------------------|
+| /cluster/serviceAddress | string    | Reception address used for cluster administration |
+| /cluster/servicePort    | string    | Reception port used for cluster administration    |
 
 **Cluster definition file**
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/notificationAddress
-
-string
-
-Multicast address for cluster administration
-
-/cluster/notificationPort
-
-string
-
-Multicast port for cluster administration
+| Parameters                   | Data type | Meaning                                      |
+|------------------------------|-----------|----------------------------------------------|
+| /cluster/notificationAddress | string    | Multicast address for cluster administration |
+| /cluster/notificationPort    | string    | Multicast port for cluster administration    |
 
 *   Although a synchronization process is carried out with a replica when the cluster configuration is changed, a timeout time can be set for the process.
     *   /sync/timeoutInterval
@@ -514,23 +384,10 @@ In the address data serving as an interface with the JDBC/ODBC client, there are
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/sql/serviceAddress
-
-string
-
-Reception address for JDBC/ODBC client connection
-
-/sql/servicePort
-
-int
-
-Reception port for JDBC/ODBC client connection
+| Parameters          | Data type | Meaning                                           |
+|---------------------|-----------|---------------------------------------------------|
+| /sql/serviceAddress | string    | Reception address for JDBC/ODBC client connection |
+| /sql/servicePort    | int       | Reception port for JDBC/ODBC client connection    |
 
 The reception address and port of JDBC/ODBC client connection are used to connect JDBC/ODBC individual client to the nodes in the cluster, and to access the cluster data in SQL. This address is used when configuring a cluster with a single node, but in the case where multiple nodes are present through API, the address is not used explicitly.
 
@@ -538,23 +395,10 @@ The reception address and port of JDBC/ODBC client connection are used to connec
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/sql/notificationAddress
-
-string
-
-Address for multi-cast distribution to JDBC/ODBC client
-
-/sql/notificationPort
-
-int
-
-Multicast port to JDBC/ODBC client
+| Parameters               | Data type | Meaning                                                 |
+|--------------------------|-----------|---------------------------------------------------------|
+| /sql/notificationAddress | string    | Address for multi-cast distribution to JDBC/ODBC client |
+| /sql/notificationPort    | int       | Multicast port to JDBC/ODBC client                      |
 
 The address and port used for multicast distribution to a JDBC/ODBC client are used for the GridDB cluster to notify the JDBC/ODBC client of cluster data, and to access the cluster data in SQL with the JDBC/ODBC client.
 
@@ -570,17 +414,9 @@ The cluster name is specified in the following configuration items of the **clus
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/clusterName
-
-string
-
-Name of cluster to create
+| Parameters           | Data type | Meaning                   |
+|----------------------|-----------|---------------------------|
+| /cluster/clusterName | string    | Name of cluster to create |
 
 **\[Points to note\]**
 
@@ -604,17 +440,9 @@ When composing a cluster using the fixed list method, configure the parameters i
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/notificationMember
-
-string
-
-Specify the address list when using the fixed list method as the cluster configuration method.
+| Parameters           | Data type | Meaning                   |
+|----------------------|-----------|---------------------------|
+| /cluster/clusterName | string    | Name of cluster to create |
 
 A configuration example of a cluster definition file is shown below.
 
@@ -664,23 +492,10 @@ When composing a cluster using the provider method, configure the parameters in 
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/notificationProvider/url
-
-string
-
-Specify the URL of the address provider when using the provider method as the cluster configuration method.
-
-/cluster/notificationProvider/updateInterval
-
-string
-
-Specify the interval to get the list from the address provider. Specify a value that is 1s or higher and less than 2^31s.
+| Parameters                                   | Data type | Meaning                                                                                                                   |
+|----------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------|
+| /cluster/notificationProvider/url            | string    | Specify the URL of the address provider when using the provider method as the cluster configuration method.               |
+| /cluster/notificationProvider/updateInterval | string    | Specify the interval to get the list from the address provider. Specify a value that is 1s or higher and less than 2^31s. |
 
 A configuration example of a cluster definition file is shown below.
 
@@ -769,39 +584,12 @@ The griddb-newsql package is only available in GridDB Advanced Edition.
 
   
 
-Package name
-
-File name
-
-Description
-
-griddb-java_lib
-
-griddb-java\_lib-X.X.X-linux.x86\_64.rpm
-
-Java library is included.
-
-(/usr/share/java/gridstore.jar)
-
-griddb-c_lib
-
-griddb-c\_lib-X.X.X-linux.x86\_64.rpm
-
-C header file and library are included.
-
-(/usr/include/gridstore.h and /usr/lib64/libgridstore.so)
-
-griddb-docs
-
-griddb-docs-X.X.X-linux.x86_64.rpm
-
-GridDB manual and program samples are included.
-
-griddb-newsql
-
-griddb-newsql-X.X.X-linux.x86_64.rpm
-
-NewSQL interface library is included.
+| Package name    | File name                              | Description                                                                                        |
+|-----------------|----------------------------------------|----------------------------------------------------------------------------------------------------|
+| griddb-java_lib | griddb-java_lib-X.X.X-linux.x86_64.rpm | Java library is included. (/usr/share/java/gridstore.jar)                                          |
+| griddb-c_lib    | griddb-c_lib-X.X.X-linux.x86_64.rpm    |  C header file and library are included. (/usr/include/gridstore.h and /usr/lib64/libgridstore.so) |
+| griddb-docs     | griddb-docs-X.X.X-linux.x86_64.rpm     | GridDB manual and program samples are included.                                                    |
+| griddb-newsql   | griddb-newsql-X.X.X-linux.x86_64.rpm   | NewSQL interface library is included.                                                              |
 
 Install using the rpm command as a root user.
 

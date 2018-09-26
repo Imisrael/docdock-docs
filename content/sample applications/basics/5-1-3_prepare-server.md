@@ -21,21 +21,11 @@ The environment will be configured as follows:
 
 **Table 2 middleware version**
 
-middleware
-
-version
-
-GridDB Community Edition
-
-2.8.0
-
-Docker
-
-1.12.0
-
-Docker Compose
-
-1.8.0
+| middleware               | version |
+|--------------------------|---------|
+| GridDB Community Edition | 2.8.0   |
+| Docker                   | 1.12.0  |
+| Docker Compose           | 1.8.0   |
 
 The environment in which you run GridDB will be built in a container using [Docker](https://www.docker.com) but you can apply the same concepts to other VMs or a native OS to suit your environment. We will install Docker to the host machine's OS (Centos 7), then manually build a single node GridDB server and then a two node GridDB cluster using docker-compose.
 

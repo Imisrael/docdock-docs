@@ -104,35 +104,12 @@ In the address data serving as an interface with the client, there are configura
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/transaction/serviceAddress
-
-string
-
-Reception address of transaction process
-
-/transaction/servicePort
-
-string
-
-Reception port of transaction process
-
-/system/serviceAddress
-
-string
-
-Connection address of operation command
-
-/system/servicePort
-
-string
-
-Connection port of operation command
+| Parameters                  | Data type | Meaning                                  |
+|-----------------------------|-----------|------------------------------------------|
+| /transaction/serviceAddress | string    | Reception address of transaction process |
+| /transaction/servicePort    | string    | Reception port of transaction process    |
+| /system/serviceAddress      | string    | Connection address of operation command  |
+| /system/servicePort         | string    | Connection port of operation command     |
 
 The reception address and port of transaction processes are used to connect individual client to the nodes in the cluster, and to request for the transaction process from the cluster. This address is used when configuring a cluster with a single node, but in the case where multiple nodes are present through API, the address is not used explicitly.
 
@@ -144,23 +121,10 @@ These reception/connection addresses need not be set so long as there is no need
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/transaction/notificationAddress
-
-string
-
-Interface address between client and cluster
-
-/transaction/notificationPort
-
-string
-
-Interface port between client and cluster
+| Parameters                       | Data type | Meaning                                      |
+|----------------------------------|-----------|----------------------------------------------|
+| /transaction/notificationAddress | string    | Interface address between client and cluster |
+| /transaction/notificationPort    | string    | Interface port between client and cluster    |
 
 A multi-cast address and port are specified in the interface address between a client and cluster. This is used by a GridDB cluster to send cluster information to its clients and for the clients to send processing requests via the API to the cluster. See the description of GridStoreFactory class/method in “GridDB API reference” ([GridDB\_API\_Reference.html](/en/docs/manuals/v3.1/GridDB_API_Reference.html)) for details.
 
@@ -174,45 +138,19 @@ In the address data for a cluster to autonomously perform cluster administration
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/serviceAddress
-
-string
-
-Reception address used for cluster administration
-
-/cluster/servicePort
-
-string
-
-Reception port used for cluster administration
+| Parameters              | Data type | Meaning                                           |
+|-------------------------|-----------|---------------------------------------------------|
+| /cluster/serviceAddress | string    | Reception address used for cluster administration |
+| /cluster/servicePort    | string    | Reception port used for cluster administration    |
 
 **Cluster definition file**
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/notificationAddress
-
-string
-
-Multicast address for cluster administration
-
-/cluster/notificationPort
-
-string
-
-Multicast port for cluster administration
+| Parameters                   | Data type | Meaning                                      |
+|------------------------------|-----------|----------------------------------------------|
+| /cluster/notificationAddress | string    | Multicast address for cluster administration |
+| /cluster/notificationPort    | string    | Multicast port for cluster administration    |
 
 *   Although a synchronization process is carried out with a replica when the cluster configuration is changed, a timeout time can be set for the process.
     *   /sync/timeoutInterval
@@ -232,23 +170,10 @@ In the address data serving as an interface with the JDBC/ODBC client, there are
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/sql/serviceAddress
-
-string
-
-Reception address for JDBC/ODBC client connection
-
-/sql/servicePort
-
-int
-
-Reception port for JDBC/ODBC client connection
+| Parameters          | Data type | Meaning                                           |
+|---------------------|-----------|---------------------------------------------------|
+| /sql/serviceAddress | string    | Reception address for JDBC/ODBC client connection |
+| /sql/servicePort    | int       | Reception port for JDBC/ODBC client connection    |
 
 The reception address and port of JDBC/ODBC client connection are used to connect JDBC/ODBC individual client to the nodes in the cluster, and to access the cluster data in SQL. This address is used when configuring a cluster with a single node, but in the case where multiple nodes are present through API, the address is not used explicitly.
 
@@ -256,23 +181,10 @@ The reception address and port of JDBC/ODBC client connection are used to connec
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/sql/notificationAddress
-
-string
-
-Address for multi-cast distribution to JDBC/ODBC client
-
-/sql/notificationPort
-
-int
-
-Multicast port to JDBC/ODBC client
+| Parameters               | Data type | Meaning                                                 |
+|--------------------------|-----------|---------------------------------------------------------|
+| /sql/notificationAddress | string    | Address for multi-cast distribution to JDBC/ODBC client |
+| /sql/notificationPort    | int       | Multicast port to JDBC/ODBC client                      |
 
 The address and port used for multicast distribution to a JDBC/ODBC client are used for the GridDB cluster to notify the JDBC/ODBC client of cluster data, and to access the cluster data in SQL with the JDBC/ODBC client.
 
@@ -288,17 +200,9 @@ The cluster name is specified in the following configuration items of the **clus
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/clusterName
-
-string
-
-Name of cluster to create
+| Parameters           | Data type | Meaning                   |
+|----------------------|-----------|---------------------------|
+| /cluster/clusterName | string    | Name of cluster to create |
 
 **\[Points to note\]**
 
@@ -322,17 +226,9 @@ When composing a cluster using the fixed list method, configure the parameters i
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/notificationMember
-
-string
-
-Specify the address list when using the fixed list method as the cluster configuration method.
+| Parameters                  | Data type | Meaning                                                                                        |
+|-----------------------------|-----------|------------------------------------------------------------------------------------------------|
+| /cluster/notificationMember | string    | Specify the address list when using the fixed list method as the cluster configuration method. |
 
 A configuration example of a cluster definition file is shown below.
 
@@ -382,23 +278,10 @@ When composing a cluster using the provider method, configure the parameters in 
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/cluster/notificationProvider/url
-
-string
-
-Specify the URL of the address provider when using the provider method as the cluster configuration method.
-
-/cluster/notificationProvider/updateInterval
-
-string
-
-Specify the interval to get the list from the address provider. Specify a value that is 1s or higher and less than 2^31s.
+| Parameters                                   | Data type | Meaning                                                                                                                   |
+|----------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------|
+| /cluster/notificationProvider/url            | string    | Specify the URL of the address provider when using the provider method as the cluster configuration method.               |
+| /cluster/notificationProvider/updateInterval | string    | Specify the interval to get the list from the address provider. Specify a value that is 1s or higher and less than 2^31s. |
 
 A configuration example of a cluster definition file is shown below.
 
@@ -474,23 +357,10 @@ The related parameters are shown below.
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/dataStore/persistencyMode
-
-string
-
-Persistency mode
-
-/dataStore/logWriteMode
-
-int
-
-Log write mode
+| Parameters                 | Data type | Meaning          |
+|----------------------------|-----------|------------------|
+| /dataStore/persistencyMode | string    | Persistency mode |
+| /dataStore/logWriteMode    | int       | Log write mode   |
 
 The persistency mode specifies whether to write data to a file during a data update. The log write mode specifies the timing to write data to the transaction log file.
 
@@ -522,17 +392,9 @@ The related parameters are shown below.
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/transaction/replicationMode
-
-int
-
-Replication mode
+| Parameters                   | Data type | Meaning          |
+|------------------------------|-----------|------------------|
+| /transaction/replicationMode | int       | Replication mode |
 
 The replication mode specifies how to create a replica. The replication method has to be same for all nodes in the cluster .
 
@@ -551,17 +413,9 @@ The warm start process can be enabled/disabled by the parameter below.
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/dataStore/storeWarmStart
-
-boolean
-
-Start processing mode
+| Parameters                | Data type | Meaning               |
+|---------------------------|-----------|-----------------------|
+| /dataStore/storeWarmStart | boolean   | Start processing mode |
 
 *   false: non-warm start mode
 *   true: warm start mode
@@ -576,65 +430,17 @@ An explanation of the other parameters is given. See Annex [Parameters list](#pa
 
   
 
-Parameters
-
-Data type
-
-Meaning
-
-/dataStore/dbPath
-
-string
-
-Database file directory
-
-/dataStore/backupPath
-
-string
-
-Backup file directory
-
-/dataStore/storeMemoryLimit
-
-string
-
-Memory buffer size
-
-/dataStore/concurrency
-
-int
-
-Processing parallelism
-
-/dataStore/affinityGroupSize
-
-int
-
-No. of data affinity groups
-
-/checkpoint/checkpointInterval
-
-int
-
-Checkpoint execution interval (unit: sec)
-
-/system/eventLogPath
-
-string
-
-Output directory of event log file
-
-/transaction/connectionLimit
-
-int
-
-No. of connections upper limit value
-
-/trace/category
-
-string
-
-Event log output level
+| Parameters                     | Data type | Meaning                                   |
+|--------------------------------|-----------|-------------------------------------------|
+| /dataStore/dbPath              | string    | Database file directory                   |
+| /dataStore/backupPath          | string    | Backup file directory                     |
+| /dataStore/storeMemoryLimit    | string    | Memory buffer size                        |
+| /dataStore/concurrency         | int       | Processing parallelism                    |
+| /dataStore/affinityGroupSize   | int       | No. of data affinity groups               |
+| /checkpoint/checkpointInterval | int       | Checkpoint execution interval (unit: sec) |
+| /system/eventLogPath           | string    | Output directory of event log file        |
+| /transaction/connectionLimit   | int       | No. of connections upper limit value      |
+| /trace/category                | string    | Event log output level                    |
 
 *   A database file directory is created when the data registered in the in-memory is perpetuated. In this directory, the transaction log file and checkpoint files are created.
 *   A backup file directory is created when a backup is executed (further details will be explained in the subsequent chapters). In this directory, the backup file is stored.

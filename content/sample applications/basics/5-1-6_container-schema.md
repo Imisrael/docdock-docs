@@ -19,36 +19,10 @@ Data of the measuring instruments and instrument log that will be handled in thi
 
   
 
-Data
-
-Container type
-
-Quantity
-
-Container name
-
-Row key
-
-Measuring instrument
-
-Collection
-
-1
-
-weather_station
-
-Instrument ID
-
-Instrument log
-
-TimeSeries Container
-
-1 per instrument
-
-weather\_station\_  
-(Example:weather\_station\_1)
-
-Logging date and time
+| Data                 | Container type       | Quantity         | Container name                                | Row key               |
+|----------------------|----------------------|------------------|-----------------------------------------------|-----------------------|
+| Measuring instrument | Collection           | 1                | weather_station                               | Instrument ID         |
+| Instrument log       | TimeSeries Container | 1 per instrument | weather_station_  (Example:weather_station_1) | Logging date and time |
 
 One collection will be created with rows corresponding to different measuring instruments..  
 One TimeSeries container will be created as the instrument log for each measuring instrument.  
@@ -148,71 +122,18 @@ The following types of data can be used in a GridDB column.
 
   
 
-Column Type
-
-Type in Program
-
-Description
-
-BOOL
-
-boolean or Boolean
-
-TRUE or FALSE.
-
-STRING
-
-String
-
-Zero or more Unicode characters excluding the NULL character (U+0000).
-
-BYTE
-
-Byte or byte
-
-Integer value in the following range.(-27 to 27-1)
-
-SHORT
-
-Short or short
-
-Integer value in the following range.(-215 to 215-1)
-
-INTEGER
-
-Integer or int
-
-Integer value in the following range.(-231 to 231-1)
-
-LONG
-
-Long or long
-
-Integer value in the following range.(-263 to 263-1)
-
-FLOAT
-
-Float or float
-
-Single-precision floating point number.
-
-DOUBLE
-
-Double or double
-
-Double-precision floating point number.
-
-TIMESTAMP
-
-java.util.Date
-
-Combination of a date and time consisting of year, month, day, hour, minute and second.
-
-BLOB
-
-java.sql.Blob
-
-Binary data.
+| Column Type | Type in Program    | Description                                                                             |
+|-------------|--------------------|-----------------------------------------------------------------------------------------|
+| BOOL        | boolean or Boolean | TRUE or FALSE.                                                                          |
+| STRING      | String             | Zero or more Unicode characters excluding the NULL character (U+0000).                  |
+| BYTE        | Byte or byte       | Integer value in the following range.(-2^7 to 2^7-1)                                    |
+| SHORT       | Short or short     | Integer value in the following range.(-2^15 to 2^15-1)                                  |
+| INTEGER     | Integer or int     | Integer value in the following range.(-2^31 to 2^31-1)                                  |
+| LONG        | Long or long       | Integer value in the following range.(-2^63 to 2^63-1)                                  |
+| FLOAT       | Float or float     | Single-precision floating point number.                                                 |
+| DOUBLE      | Double or double   | Double-precision floating point number.                                                 |
+| TIMESTAMP   | java.util.Date     | Combination of a date and time consisting of year, month, day, hour, minute and second. |
+| BLOB        | java.sql.Blob      | Binary data.                                                                            |
 
 All types except `BLOB` can be stored as an array.
 

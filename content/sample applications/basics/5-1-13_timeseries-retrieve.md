@@ -80,25 +80,12 @@ You can fetch rows with timestamps are earlier or later than specified timestamp
 
 **Table 1 TimeOperator Enum**
 
-Acquisition method
-
-Description
-
-TimeOperator.NEXT
-
-Returns the oldest among the Rows whose timestamp are identical with or later than the specified time.
-
-TimeOperator.NEXT_ONLY
-
-Returns the oldest among the Rows whose timestamp are later than the specified time.
-
-TimeOperator.PREVIOUS
-
-Returns the newest among the Rows whose timestamp are identical with or earlier than the specified time.
-
-TimeOperator.PREVIOUS_ONLY
-
-Returns the newest among the Rows whose timestamp are earlier than the specified time.
+| Acquisition method         | Description                                                                                              |
+|----------------------------|----------------------------------------------------------------------------------------------------------|
+| TimeOperator.NEXT          | Returns the oldest among the Rows whose timestamp are identical with or later than the specified time.   |
+| TimeOperator.NEXT_ONLY     | Returns the oldest among the Rows whose timestamp are later than the specified time.                     |
+| TimeOperator.PREVIOUS      | Returns the newest among the Rows whose timestamp are identical with or earlier than the specified time. |
+| TimeOperator.PREVIOUS_ONLY | Returns the newest among the Rows whose timestamp are earlier than the specified time.                   |
 
   
 
@@ -175,41 +162,16 @@ The different types of Aggregation methods are as follows:
 
 **Table 2 Aggregation types**
 
-Aggregation method
-
-Description
-
-Aggregation.AVERAGE
-
-Obtain the average value.
-
-Aggregation.COUNT
-
-Obtain the number of samples.
-
-Aggregation.MAXIMUM
-
-Obtain the maximum value.
-
-Aggregation.MINIMUM
-
-Obtain the minimum value.
-
-Aggregation.STANDARD_DEVIATION
-
-Obtain the standard deviation.
-
-Aggregation.TOTAL
-
-Obtain the total value (sum).
-
-Aggregation.VARIANCE
-
-Obtain the variance within the rows.
-
-Aggregation.WEIGHTED_AVERAGE
-
-Obtain the weighted average.
+| Aggregation method             | Description                          |
+|--------------------------------|--------------------------------------|
+| Aggregation.AVERAGE            | Obtain the average value.            |
+| Aggregation.COUNT              | Obtain the number of samples.        |
+| Aggregation.MAXIMUM            | Obtain the maximum value.            |
+| Aggregation.MINIMUM            | Obtain the minimum value.            |
+| Aggregation.STANDARD_DEVIATION | Obtain the standard deviation.       |
+| Aggregation.TOTAL              | Obtain the total value (sum).        |
+| Aggregation.VARIANCE           | Obtain the variance within the rows. |
+| Aggregation.WEIGHTED_AVERAGE   | Obtain the weighted average.         |
 
 For more information, please refer to the [GridDB API Reference](/en/docs/GridDB_API_Reference.html)
 
