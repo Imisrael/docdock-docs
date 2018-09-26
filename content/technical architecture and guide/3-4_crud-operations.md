@@ -20,12 +20,12 @@ GridDB can be accessed using TQL or through its native API. The native API willl
 
 Containers can be made easily by defining the data as a class.
 
-``
-// Create Collection
-Collection weatherStationCol =
-        store.putCollection("weather_station", WeatherStation.class);
-return weatherStationCol; 
-``
+
+	// Create Collection
+	Collection weatherStationCol =
+		store.putCollection("weather_station", WeatherStation.class);
+	return weatherStationCol; 
+
 
 34-35 line: create the collection by using the GridStore.putCollection (String, Class) method. The String Specifies the name of the container. The Class specifies the WeatherStation class that was created in the schema definition.
 
@@ -33,26 +33,26 @@ return weatherStationCol;
 
 Ready access to GridDB in the above process is now ready. Let's try to register the data in GridDB.
 
-``
-// Set the value to Row data
-WeatherStation weatherStation1 = new WeatherStation ();
-weatherStation1.id = "1";
-weatherStation1.name = "WeatherStation 01";
-weatherStation1.latitude = 35.68944;
-weatherStation1.longitude = 139.69167;
-weatherStation1.hasCamera = true;
 
-WeatherStation weatherStation2 = new WeatherStation ();
-weatherStation2.id = "2";
-weatherStation2.name = "WeatherStation 02";
-weatherStation2.latitude = 35.02139;
-weatherStation2.longitude = 135.75556;
-weatherStation2.hasCamera = false;
+	// Set the value to Row data
+	WeatherStation weatherStation1 = new WeatherStation ();
+	weatherStation1.id = "1";
+	weatherStation1.name = "WeatherStation 01";
+	weatherStation1.latitude = 35.68944;
+	weatherStation1.longitude = 139.69167;
+	weatherStation1.hasCamera = true;
 
-// Register Collection
-weatherStationCol.put (weatherStation1);
-weatherStationCol.put (weatherStation2);
-``
+	WeatherStation weatherStation2 = new WeatherStation ();
+	weatherStation2.id = "2";
+	weatherStation2.name = "WeatherStation 02";
+	weatherStation2.latitude = 35.02139;
+	weatherStation2.longitude = 135.75556;
+	weatherStation2.hasCamera = false;
+
+	// Register Collection
+	weatherStationCol.put (weatherStation1);
+	weatherStationCol.put (weatherStation2);
+
 
 
 \* 30-42 line: Set the values of the data to be registered.  
@@ -64,19 +64,19 @@ Now the registered data can be retrieved from the GridDB server.
 
 **List.6 data acquisition process** (FirstGridDB.java)
 
-``
-// Retrieve Collection
-System.out.println("get by key");
-System.out.println("ID\\tName\\t\\t\\tLongitude\\tLatitude\\tCamera");
-weatherStationCol = store.getCollection("weather_station", WeatherStation.class);
 
-for (int i = 0; i <2; i ++) {
-	WeatherStation weatherStation = weatherStationCol.get (String.valueOf (i + 1));
-	System.out.println (String.format("% - 3s\\t% -20s\\t% s\\t% s\\t% -5s", weatherStation.id,
-			weatherStation.name, weatherStation.latitude, weatherStation.longitude,
-			weatherStation.hasCamera));
-}
-``
+	// Retrieve Collection
+	System.out.println("get by key");
+	System.out.println("ID\\tName\\t\\t\\tLongitude\\tLatitude\\tCamera");
+	weatherStationCol = store.getCollection("weather_station", WeatherStation.class);
+
+	for (int i = 0; i <2; i ++) {
+		WeatherStation weatherStation = weatherStationCol.get (String.valueOf (i + 1));
+		System.out.println (String.format("% - 3s\\t% -20s\\t% s\\t% s\\t% -5s", weatherStation.id,
+				weatherStation.name, weatherStation.latitude, weatherStation.longitude,
+				weatherStation.hasCamera));
+	}
+
 
 \* 51 line: First get the container by specifying the container name and class.  
 \* 54 line: Then get row data by specifying the key.  
@@ -84,20 +84,20 @@ Here is the output:
   
 **List.7 data acquisition result**
 
-``
-get by key
-ID Name Longitude Latitude Camera
-1 WeatherStation 01 35.68944 139.69167 true
-2 WeatherStation 02 35.02139 135.75556 false
-``
+
+	get by key
+	ID Name Longitude Latitude Camera
+	1 WeatherStation 01 35.68944 139.69167 true
+	2 WeatherStation 02 35.02139 135.75556 false
+
 
 **Deleting A Container**
 
 The command to delete a container looks like this:
 
-``
-Container.dropCollection (String)
-``
+
+	Container.dropCollection (String)
+
 
 ### TQL
 
@@ -110,12 +110,12 @@ The naming rules for containers and tables are the same as those for databases.
 
 **Container Creation**
 
-``
-Container (collection)	
-createcollection	Container name Column name Type \[Column name Type …\]
-Container (time series container)	
-createtimeseries	Container name Compression method Column name type \[Column name Type …\]
-``
+
+	Container (collection)	
+	createcollection	Container name Column name Type \[Column name Type …\]
+	Container (time series container)	
+	createtimeseries	Container name Compression method Column name type \[Column name Type …\]
+
 
 *   Description of each argument
     
