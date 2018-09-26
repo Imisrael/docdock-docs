@@ -1,27 +1,27 @@
 baseURL = "/"
 
 languageCode = "en-us"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "latest"
 title = ""
 theme = "docdock"
 # themesdir = "../.."
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
 
-defaultContentLanguage = "en"
+defaultContentLanguage = "latest"
 defaultContentLanguageInSubdir= true
 enableMissingTranslationPlaceholders = false
 
 [Languages]
-[Languages.en]
+[Languages.latest]
 title = "Documentation for Hugo docDock"
 weight = 1
-languageName = "English"
+languageName = "Latest"
 
-[Languages.jp]
-title = "ドキュメンテーション"
+[Languages.3]
+title = "Version 3.0"
 weight = 2
-languageName = "Japanese"
+languageName = "V. 3.0"
 
 
 [params]
